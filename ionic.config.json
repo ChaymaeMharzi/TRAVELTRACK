@@ -1,0 +1,10 @@
+{
+  "name": "myAppIo",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}
