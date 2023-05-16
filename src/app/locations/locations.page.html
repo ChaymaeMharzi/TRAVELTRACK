@@ -1,0 +1,57 @@
+<!-- <ion-header>
+    <ion-toolbar color="1A2C31">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button (click)="onNewLocation()">
+                <ion-icon name="map"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>
+            <ion-icon name="location"></ion-icon>
+            Locations
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let p of locations">
+            <ion-label (click)="onDetailLocation(p)">{{p.title}}</ion-label>
+            <ion-icon (click)="onRemove(p)" name="trash" slot="end"></ion-icon>
+        </ion-item>
+    </ion-list>
+</ion-content> -->
+
+
+<ion-header style="background-color: #076586 ; color: white;">
+    <ion-toolbar color="#076586" style="--ion-color-primary: #076586;">
+        <!-- <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons> -->
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+
+
+        <ion-buttons slot="end">
+            <ion-button (click)="onNewLocation()">
+                <ion-icon name="map"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title style="font-family: 'Rajdhani', 'Darumadrop One', cursive;">
+            <ion-icon name="location" style="font-family: 'Rajdhani'"></ion-icon>
+            Locations
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding" style="--ion-color-primary: #076586; --ion-background-color: #ffffff; --ion-color-light: white; --ion-color-dark: #ffffff; --ion-color-medium: #000000; ;font-family: 'Rajdhani'">
+    <ion-list style="margin-top: 10px ;">
+        <ion-item *ngFor="let p of locations" style="font-family: 'Rajdhani'; ">
+            <ion-label (click)="onDetailLocation(p)">{{p.title}}</ion-label>
+            <ion-icon (click)="onRemove(p)" name="trash" slot="end"></ion-icon>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,79 @@
+<!-- <ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            New Location
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form #f="ngForm" (ngSubmit)="onAddLocation(f.value)">
+        <ion-list>
+            <ion-item>
+                <ion-label>Title:</ion-label>
+                <ion-input type="text" name="title" ngModel></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>City:</ion-label>
+                <ion-input type="text" name="city" ngModel></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Country:</ion-label>
+                <ion-input type="text" name="country" ngModel></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Keywords:</ion-label>
+                <ion-input type="text" name="keyWords" ngModel></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-button type="submit">Save</ion-button>
+    </form>
+
+</ion-content> -->
+
+
+<ion-header style="background-color: #076586 ; color: white;">
+    <ion-toolbar color="1A2C31" style="--ion-color-primary: #076586;">
+        <!-- <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons> -->
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title style="font-family: 'Rajdhani', 'Darumadrop One', cursive;">
+            New Location
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding" style="--ion-color-primary: #076586; --ion-background-color: #ffffff; --ion-color-light: white; --ion-color-dark: #ffffff; --ion-color-medium: #000000; font-family: 'Rajdhani'">
+    <form #f="ngForm" (ngSubmit)="onAddLocation(f.value)">
+        <ion-list>
+            <ion-item>
+                <ion-label>Title:</ion-label>
+                <ion-input type="text" name="title" ngModel></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>City:</ion-label>
+                <ion-input type="text" name="city" ngModel></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Country:</ion-label>
+                <ion-input type="text" name="country" ngModel></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Keywords:</ion-label>
+                <ion-input type="text" name="keyWords" ngModel></ion-input>
+            </ion-item>
+        </ion-list>
+        <div class="ion-text-center">
+            <ion-button type="submit">
+                <ion-icon name="save" slot="start"></ion-icon>
+                Save
+            </ion-button>
+        </div>
+    </form>
+</ion-content>

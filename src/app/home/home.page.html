@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar color="primary" style="--ion-color-primary: #076586;">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title style="font-family: 'Rajdhani', 'Darumadrop One', cursive;">
+            <ion-icon name="home" style="font-family: 'Rajdhani'"></ion-icon> Home
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding" style="--ion-color-primary: #d8d2a9; --ion-background-color: #508DAC; --ion-color-light: white; --ion-color-dark: #1c261f; --ion-color-medium: #000000; ;font-family: 'Rajdhani'; background-image: url('../../assets/images/ssplash.jpg'); background-size: cover;">
+    <div class="background-image">
+
+        <!-- Content of the home page -->
+
+        <ion-card style="font-family: 'Rajdhani'">
+            <ion-card-header class="header">
+                <ion-card-title style="color: white; font-family: 'Righteous','Darumadrop One'; font-size: 50px">TravelTrack</ion-card-title>
+            </ion-card-header>
+            <ion-card-content style="font-family: 'Rajdhani'">
+                <!-- <ion-avatar>
+                <img src="../../assets/images/Clear.png" alt="Avatar" style="width: 52px; height: 52px; border-radius: 50%;">
+            </ion-avatar> -->
+                <div class="avatar-container">
+                    <div class="welcome-avatar">
+                        <ion-avatar>
+                            <img src="../../assets/images/av.jpg" alt="Avatar" style="width: 52px; height: 52px; border-radius: 50%;">
+                        </ion-avatar>
+                        <div class="welcome" style="color: white; font-family: 'Rajdhani'; font-size: 20px;">Welcome <strong>{{contact.name}}</strong></div>
+                    </div>
+                </div>
+                <ion-list>
+                    <!-- <ion-item>
+                    <div class="welcome" style="color: white; font-family: 'Rajdhani'; font-size: 20px;">Welcome <strong>{{contact.name}}</strong></div>
+                </ion-item> -->
+                    <ion-item class="email" style="text-align: center; color: white; font-family: 'Rajdhani'; font-size: 20px;">{{contact.email}}</ion-item>
+                </ion-list>
+                <div class="quote">
+                    <p style="color: white; font-size: 20px;">"Traveling is the only thing you can buy that makes you richer."</p>
+                </div>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <!-- </ion-content> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Pacifico&family=Rajdhani:wght@300&display=swap');
+    </style>
+    <!-- </div> -->
+    <!-- </ion-card-content> -->
+    <!-- </ion-card> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Pacifico&family=Rajdhani:wght@300&display=swap');
+    </style>

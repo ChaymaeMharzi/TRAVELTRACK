@@ -1,0 +1,136 @@
+<!-- <ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <ion-icon name="images"></ion-icon>
+            Gallery
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-label>Keyword:</ion-label>
+                <ion-input type="text" [(ngModel)]="keyword"></ion-input>
+                <ion-button (click)="onLoadImages()">OK</ion-button>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-list *ngIf="dataImages">
+        <ion-card *ngFor="let im of dataImages.hits">
+            <ion-card-header>
+                <ion-item>
+                    <ion-avatar slot="start">
+                        <ion-img [src]="im.userImageURL"></ion-img>
+                    </ion-avatar>
+                    <ion-label>{{im.user}}</ion-label>
+                </ion-item>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-img [src]="im.previewURL"></ion-img>
+            </ion-card-content>
+            <ion-card-content>
+                <ion-row>
+                    <ion-col>
+                        <ion-button fill="outline" size="small">
+                            <ion-icon name="thumbs-up"></ion-icon>
+                            <ion-label>{{im.likes}}</ion-label>
+                        </ion-button>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button fill="outline" size="small">
+                            <ion-icon name="document-text"></ion-icon>
+                            <ion-label>{{im.comments}}</ion-label>
+                        </ion-button>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button fill="outline " size="small ">
+                            <ion-icon name="download"></ion-icon>
+                            <ion-label>{{im.downloads}}</ion-label>
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="loadData($event) ">
+        <ion-infinite-scroll-content loadingSpinner="bubbles " loadingText="Loading more data... ">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content> -->
+
+
+<ion-header>
+    <ion-toolbar color="primary" style="--ion-color-primary: #076586;">
+        <!-- <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons> -->
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title style="font-family: 'Rajdhani', 'Darumadrop One', cursive;">
+            <ion-icon name="images" style="font-family: 'Rajdhani'"></ion-icon>
+            Gallery
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding" style="--ion-color-primary: #076586; --ion-background-color: #7fc1e2; --ion-color-light: white; --ion-color-dark: #1c261f; --ion-color-medium: #000000; ;font-family: 'Rajdhani'">
+    <ion-card style="font-family: 'Rajdhani'">
+        <ion-card-content>
+            <ion-item>
+                <ion-label style="font-weight: bold;">Keyword:</ion-label>
+                <ion-input type="text" [(ngModel)]="keyword"></ion-input>
+                <ion-button (click)="onLoadImages()">
+                    <ion-icon name="search"></ion-icon>
+                </ion-button>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-list *ngIf="dataImages" style="background-color: #ffffff;">
+        <ion-card *ngFor="let im of dataImages.hits">
+            <ion-card-header>
+                <ion-item>
+                    <ion-avatar slot="start" style="background-color: #ffffff;">
+                        <ion-img [src]="im.userImageURL"></ion-img>
+                    </ion-avatar>
+                    <ion-label>{{im.user}}</ion-label>
+                </ion-item>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-img [src]="im.previewURL"></ion-img>
+            </ion-card-content>
+            <ion-card-content style="background-color: #ffffff;">
+                <ion-row>
+                    <ion-col>
+                        <ion-button fill="outline" size="small">
+                            <ion-icon name="thumbs-up"></ion-icon>
+                            <ion-label>{{im.likes}}</ion-label>
+                        </ion-button>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button fill="outline" size="small">
+                            <ion-icon name="document-text"></ion-icon>
+                            <ion-label>{{im.comments}}</ion-label>
+                        </ion-button>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button fill="outline" size="small">
+                            <ion-icon name="download"></ion-icon>
+                            <ion-label>{{im.downloads}}</ion-label>
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
